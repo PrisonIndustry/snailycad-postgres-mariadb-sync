@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    mysql:
+      url: jdbc:mariadb://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}
+      username: ${MYSQL_USERNAME}
+      password: ${MYSQL_PASSWORD}
+      driver-class-name: ${MYSQL_DRIVER:org.mariadb.jdbc.Driver}
+
+    postgres:
+      url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DATABASE}
+      username: ${POSTGRES_USERNAME}
+      password: ${POSTGRES_PASSWORD}
+      driver-class-name: ${POSTGRES_DRIVER:org.postgresql.Driver}
+
+server:
+  port: ${SERVER_PORT:8080}
+
+sync:
+  interval:
+    ms: ${SYNC_INTERVAL_MS:60000}
+
+gender:
+  male: ${MALE_ID}
+  female: ${FEMALE_ID}
+
+other:
+  ethnicity: ${ETHNICITY_ID}
+  driverlicense: ${DRIVERLICENSE_ID}
+  registrationstatus: ${REGISTRATION_STATUS_ID}
+  insurancestatus: ${INSURANCE_STATUS_ID}

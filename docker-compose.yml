@@ -1,0 +1,10 @@
+services:
+  mysqlpsqlsync:
+    image: mysqlpsqlsync:latest
+    container_name: mysqlpsqlsync
+    env_file:
+      - .env
+    ports:
+      - "5555:5555"
+    network_mode: host
+    restart: unless-stopped
